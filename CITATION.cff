@@ -1,0 +1,48 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite it as below."
+type: software
+title: "Decoding multimorbidity: Understanding cancers, inflammatory chronic diseases contribution to death"
+abstract: >
+  Structural Equation Modeling (SEM) analysis of a prospective cohort of 677 cancer patients
+  to elucidate the interconnected pathways linking familial vascular risk, inflammaging,
+  chronic inflammatory diseases, and cancer outcomes. Four latent variables (Inflammaging,
+  Familial Cancer Risk, Familial Vascular Risk, Early Chronic Disease) are constructed and
+  validated with sex-stratified analyses.
+authors:
+  - family-names: "Vomo Donfack"
+    given-names: "Kelly Larissa"
+    affiliation: "Université Sorbonne Paris Nord, LAGA, CNRS, UMR 7539 & IHSM UMA-CSIC, Málaga, Spain"
+  - family-names: "Gönüllu"
+    given-names: "Burak"
+    affiliation: "Faculty of Medicine, Yeditepe University, Istanbul, Turkey"
+  - family-names: "Pamoukjian"
+    given-names: "Frédéric"
+    affiliation: "Hôpital Avicenne, APHP, Service de Gériatrie, Bobigny, France"
+  - family-names: "Angeli"
+    given-names: "Eurydice"
+    affiliation: "Hôpital Avicenne, APHP, Service d'Oncologie médicale, Bobigny, France"
+  - family-names: "Ginot"
+    given-names: "Grégory"
+    affiliation: "Université Sorbonne Paris Nord, LAGA, CNRS, UMR 7539, Villetaneuse, France"
+  - family-names: "Morilla"
+    given-names: "Ian"
+    affiliation: "Université Sorbonne Paris Nord, LAGA, CNRS, UMR 7539 & IHSM UMA-CSIC, Málaga, Spain"
+  - family-names: "Bousquet"
+    given-names: "Guilhem"
+    affiliation: "Unité SynKoMIC, Université Sorbonne Paris Nord & Hôpital Avicenne, APHP, Bobigny, France"
+    orcid: "https://orcid.org/0000-0001-5594-6694"
+    email: "guilhem.bousquet@aphp.fr"
+  - family-names: "Falgarone"
+    given-names: "Géraldine"
+    affiliation: "Unité SynKoMIC, Université Sorbonne Paris Nord & Hôpital Avicenne, APHP, Bobigny, France"
+repository-code: "https://github.com/Morillalab/multimorbidity-sem"
+keywords:
+  - multimorbidity
+  - structural equation modeling
+  - inflammaging
+  - cancer
+  - chronic disease
+  - familial risk
+  - oncology
+  - sex differences
+license: MIT
