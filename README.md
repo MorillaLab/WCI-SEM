@@ -24,6 +24,8 @@ Figure 1 illustrates the theoretical SEM framework, showing the two latent varia
 
 ![Figure 1 – Theoretical model with latent and observed variables](https://github.com/MorillaLab/multimorbidity-SEM/blob/main/Figure1.png)
 
+---
+
 ## Repository Structure
 
 ```
