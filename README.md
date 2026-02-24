@@ -127,5 +127,5 @@ If you use this code or data in your work, please cite:
 ```
 Vomo Donfack KL, Gönüllu B, Pamoukjian F, Angeli E, Ginot G, Morilla I, Bousquet G, Falgarone G.
 Decoding multimorbidity: Understanding cancers, inflammatory chronic diseases contribution to death.
-[Journal], [Year]. DOI: [TBD]
+submitted, 2026. DOI: [TBD]
 ```
