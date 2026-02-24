@@ -97,7 +97,7 @@ ORCID: [0000-0001-5594-6694](https://orcid.org/0000-0001-5594-6694)
 
 | Author | Affiliation |
 |---|---|
-| Kelly Larissa Vomo Donfack | Université Sorbonne Paris Nord, LAGA, CNRS, UMR 7539 & IHSM UMA-CSIC, Málaga, Spain |
+| Kelly Larissa Vomo Donfack | Université Sorbonne Paris Nord, LAGA, CNRS, UMR 7539 & IHSM UMA-CSIC, Málaga, Spain & Unité de Recherche SynKoMIC, Université Sorbonne Paris Nord, Bobigny, Fr-93017 France |
 | Burak Gönüllu | Faculty of Medicine, Yeditepe University, Istanbul, Turkey |
 | Frédéric Pamoukjian | Hôpital Avicenne, APHP, Service de Gériatrie |
 | Eurydice Angeli | Hôpital Avicenne, APHP, Service d'Oncologie médicale |
