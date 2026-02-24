@@ -11,7 +11,7 @@ This repository contains the data analysis code and supplementary materials for 
 
 > **Decoding multimorbidity: Understanding cancers, inflammatory chronic diseases contribution to death.**
 >
-> Kelly Larissa Vomo Donfack, Burak Gönüllu, Frédéric Pamoukjian, Eurydice Angeli, Grégory Ginot, Ian Morilla, Guilhem Bousquet\*, Géraldine Falgarone
+> Kelly Larissa Vomo Donfack, Burak Gönüllu, Frédéric Pamoukjian, Eurydice Angeli, Grégory Ginot, Ian Morilla\*, Guilhem Bousquet\*, Géraldine Falgarone\*
 >
 
 ## Abstract
