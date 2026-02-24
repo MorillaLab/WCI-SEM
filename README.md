@@ -22,7 +22,7 @@ This prospective monocentric cohort study (n = 677 cancer patients, 2016–2022)
 
 Figure 1 illustrates the theoretical SEM framework, showing the two latent variables — ***Constitutional Genetics*** and ***Inflammaging*** — and their hypothesized relationships with observed variables (*age*, *smoking*, *obesity*) and disease outcomes (*auto-immune diseases*, *cancer*, *cardiovascular diseases*, *metastatic disease*, *death*). Orange ellipses represent latent variables; green rectangles represent observed variables. Solid blue arrows indicate direct paths; dashed red arrows indicate hypothesized outcome pathways.
 
-<img src="figures/Figure_1.jpg" width="75%" alt="Figure 1 – Theoretical model with latent and observed variables"/>
+<img src="figures/Figure1.jpg" width="75%" alt="Figure 1 – Theoretical model with latent and observed variables"/>
 
 ---
 
@@ -43,7 +43,7 @@ Figure 1 illustrates the theoretical SEM framework, showing the two latent varia
 │   └── README.md                    # Output file descriptions & model fit summary
 └── figures/
     ├── README.md                    # Figure legend and generation notes
-    └── Figure_1.jpg                 # Theoretical model (latent vs observed variables)
+    └── Figure_1_4.jpg               # Theoretical model (latent vs observed variables)
 ```
 
 ---
