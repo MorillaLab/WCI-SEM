@@ -1,131 +1,218 @@
-# Decoding Multimorbidity: Understanding Cancers and Inflammatory Chronic Diseases Contribution to Death
+<div align="center">
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/MorillaLab/TopoAttention/)
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
-[![STATA](https://img.shields.io/badge/Stata-17%2B-1a5276?logo=data:...&logoColor=white)](https://www.stata.com/)
+# 🔬 multimorbidity-SEM
 
-## Overview
+### Decoding Multimorbidity: Cancers, Cardiovascular & Inflammatory Chronic Diseases
 
-This repository contains the data analysis code and supplementary materials for the study:
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://choosealicense.com/licenses/gpl-3.0/)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
+[![Stata 17+](https://img.shields.io/badge/Stata-17%2B-1a5276?logo=data:...&logoColor=white)](https://www.stata.com/)
+[![Status: Submitted](https://img.shields.io/badge/status-submitted-orange.svg)]()
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MorillaLab/multimorbidity-SEM/blob/main/analysis/01_data_cleaning.ipynb)
 
-> **Decoding multimorbidity: Understanding cancers, inflammatory chronic diseases contribution to death.**
->
-> Kelly Larissa Vomo Donfack, Burak Gönüllu, Frédéric Pamoukjian, Eurydice Angeli, Grégory Ginot, Ian Morilla\*, Guilhem Bousquet\*, Géraldine Falgarone\*
->
+**The first mathematical demonstration** of interconnected pathophysiological links between familial cardiovascular risk, inflammaging, cancer, and chronic inflammatory diseases — using Structural Equation Modelling on a 677-patient prospective cohort.
 
-## Abstract
+[📄 Paper](#-citation) · [🚀 Quick Start](#-quick-start) · [📊 Key Findings](#-key-findings) · [🏗️ Model](#️-sem-framework) · [🗂️ Data](#️-data-availability)
 
-This prospective monocentric cohort study (n = 677 cancer patients, 2016–2022) applies **Structural Equation Modeling (SEM)** to elucidate the complex relationships between familial risk, inflammaging, chronic diseases, and cancer outcomes. Four latent variables — ***Inflammaging***, ***Familial Cancer Risk***, ***Familial Vascular Risk***, and ***Early Chronic Disease*** — were constructed and validated (CFI up to 0.926; RMSEA as low as 0.043). Results reveal strong interconnections between cancer severity, metastatic disease, and mortality, with marked sex-specific differences.
+</div>
 
 ---
 
-## Theoretical Model
+## 🔍 Overview
 
-Figure 1 illustrates the theoretical SEM framework, showing the two latent variables — ***Constitutional Genetics*** and ***Inflammaging*** — and their hypothesized relationships with observed variables (*age*, *smoking*, *obesity*) and disease outcomes (*auto-immune diseases*, *cancer*, *cardiovascular diseases*, *metastatic disease*, *death*). Orange ellipses represent latent variables; green rectangles represent observed variables. Solid blue arrows indicate direct paths; dashed red arrows indicate hypothesized outcome pathways.
+Multimorbidity — the co-occurrence of multiple chronic conditions — is one of the leading challenges in modern medicine. Yet the pathophysiological pathways linking cancers, cardiovascular disease, and inflammatory conditions remain poorly understood.
 
-<img src="figures/Figure_1.jpg" width="75%" alt="Figure 1 – Theoretical model with latent and observed variables"/>
+This study applies **Structural Equation Modelling (SEM)** to a prospective cohort of 677 cancer patients followed at Hôpital Avicenne (APHP, Paris) from 2016 to 2022. We construct and validate latent variables capturing *Inflammaging*, *Familial Cancer Risk*, *Familial Vascular Risk*, and *Early Chronic Disease* — and trace their causal pathways to metastatic disease and mortality.
 
----
+**Key contributions:**
+- First mathematical proof of shared constitutional pathways between familial cardiovascular risk, inflammaging, and cancer
+- Identification of sex-specific causal mechanisms in women
+- Fully validated SEM models with excellent fit (CFI up to 0.926; RMSEA as low as 0.043)
+- Open, reproducible analysis pipeline in Python + Stata
 
-## Repository Structure
-
-```
-.
-├── README.md
-├── CITATION.cff
-├── data/
-│   └── README.md                    # Data availability statement & variable descriptions
-├── analysis/
-│   ├── 01_data_cleaning.py          # Data preprocessing and iterative imputation
-│   ├── 02_descriptive_stats.py      # Exploratory data analysis (Table 1 & 2)
-│   ├── 03_correlation_matrix.py     # Cramér's V correlation matrix & heatmap
-│   └── 04_sem_models.do             # SEM construction and testing (STATA, Models 1–4)
-├── results/
-│   └── README.md                    # Output file descriptions & model fit summary
-└── figures/
-    ├── README.md                    # Figure legend and generation notes
-    └── Figure_1_4.jpg               # Theoretical model (latent vs observed variables)
-```
+<p align="center">
+  <img src="figures/Figure_1.jpg" alt="Theoretical SEM framework" width="800"/>
+  <br/>
+  <em>Figure 1 — Theoretical model. Orange ellipses: latent variables; green rectangles: observed variables.<br/>
+  Solid blue arrows: direct paths; dashed red arrows: hypothesized outcome pathways.</em>
+</p>
 
 ---
 
-## Methods Summary
+## 📊 Key Findings
 
-### Study Design
-- **Type:** Prospective, monocentric cohort
-- **Site:** Hôpital Avicenne, APHP, Bobigny, France
-- **Period:** January 2016 – December 2022
-- **N:** 677 adult cancer patients
-- **Median follow-up:** 2.14 years (Model 1), 3.03 years (Model 2)
+| Finding | Detail |
+|---|---|
+| **Inflammaging → Cancer** | Strong factor loading (β = 0.80); sex, smoking, BMI as core indicators |
+| **Familial Vascular Risk → Cancer Risk** | Significant cross-domain association, suggesting shared genetic pathways |
+| **Sex-specific mortality pathways** | In women: Inflammaging → mortality directly (not mediated); familial risk → metastasis → death |
+| **Model fit (best model)** | CFI = 0.926 · RMSEA = 0.043 · SRMR < 0.08 |
+| **Cohort** | n = 677 cancer patients · median follow-up 2.14 – 3.03 yrs |
 
-### Latent Variables
+---
+
+## 🏗️ SEM Framework
+
+Four latent variables were constructed and validated across four models:
 
 | Latent Variable | Observed Indicators |
 |---|---|
-| ***Inflammaging*** | Sex, Smoking (pack/year), BMI |
-| ***Familial Cancer Risk*** | Familial cancer, Early familial cancer |
+| ***Inflammaging*** | Sex, Smoking (pack·year), BMI |
+| ***Familial Cancer Risk*** | Familial cancer history, Early familial cancer |
 | ***Familial Vascular Risk*** | Familial CVD, Early familial CVD, Familial CVRF, Early CVRF |
 | ***Early Chronic Disease*** | Early AID, Severe AID, Early CVD, Early CVRF |
 
-### Statistical Tools
-- **Python** — data cleaning, recoding, descriptive analysis
-- **STATA** — SEM model construction and testing (maximum likelihood estimation)
-- **Model fit criteria:** CFI > 0.90, RMSEA < 0.06, SRMR < 0.08
+Models were estimated by **maximum likelihood** in Stata 17. Fit was assessed using CFI, RMSEA, and SRMR thresholds (CFI > 0.90, RMSEA < 0.06, SRMR < 0.08).
 
 ---
 
-## Key Findings
+## 🚀 Quick Start
 
-- ***Inflammaging*** (sex, smoking, BMI) showed a strong association with cancer (loading = 0.80) and was significantly associated with metastatic disease and mortality.
-- ***Familial Vascular Risk*** was significantly associated with ***Familial Cancer Risk***, which itself was associated with ***Inflammaging***, suggesting shared constitutional genetic pathways.
-- **Sex-specific analyses** revealed distinct pathways in women: familial risk and early chronic disease directly contributed to metastatic disease and death, while ***Inflammaging*** was directly (not mediated) associated with mortality.
-- This is the first mathematical demonstration of interconnected links between familial cardiovascular risk, inflammaging, cancer, and chronic inflammatory diseases.
+### Installation
+
+```bash
+git clone https://github.com/MorillaLab/multimorbidity-SEM.git
+cd multimorbidity-SEM
+pip install -r requirements.txt
+```
+
+### Run the analysis pipeline
+
+```bash
+# Step 1 — Data cleaning & iterative imputation
+python analysis/01_data_cleaning.py
+
+# Step 2 — Descriptive statistics (Tables 1 & 2)
+python analysis/02_descriptive_stats.py
+
+# Step 3 — Cramér's V correlation matrix
+python analysis/03_correlation_matrix.py
+
+# Step 4 — SEM models (requires Stata 17+)
+# Open analysis/04_sem_models.do in Stata and run all
+```
+
+### Reproduce a specific figure
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+from analysis.correlation_matrix import plot_cramers_v
+
+df = pd.read_csv("data/cohort_cleaned.csv")
+fig = plot_cramers_v(df)
+fig.savefig("figures/correlation_matrix.pdf", dpi=300)
+```
 
 ---
 
-## Data Availability
+## 📁 Repository Structure
+
+```
+multimorbidity-SEM/
+├── analysis/
+│   ├── 01_data_cleaning.py          # Preprocessing & iterative imputation
+│   ├── 02_descriptive_stats.py      # EDA — Table 1 & Table 2
+│   ├── 03_correlation_matrix.py     # Cramér's V heatmap
+│   └── 04_sem_models.do             # SEM construction (Stata, Models 1–4)
+├── data/
+│   └── README.md                    # Variable definitions & availability statement
+├── figures/
+│   ├── README.md                    # Figure legends & generation notes
+│   └── Figure_1.jpg                 # Theoretical SEM framework
+├── results/
+│   └── README.md                    # Output descriptions & model fit summary
+├── SEM ARTICLE/                     # Manuscript-related materials
+├── Figure1.png                      # Root-level figure copy
+├── requirements.txt                 # Python dependencies
+├── CITATION.cff                     # Citation metadata
+└── LICENSE                          # GPL-3.0
+```
+
+---
+
+## 🏥 Study Design
+
+| Parameter | Value |
+|---|---|
+| **Design** | Prospective monocentric cohort |
+| **Site** | Hôpital Avicenne, APHP, Bobigny, France |
+| **Period** | January 2016 – December 2022 |
+| **N** | 677 adult cancer patients |
+| **Median follow-up** | 2.14 yrs (Model 1) · 3.03 yrs (Model 2) |
+| **Primary endpoint** | All-cause mortality |
+| **Secondary endpoint** | Metastatic disease |
+
+---
+
+## 🗂️ Data Availability
 
 De-identified data supporting this study are available from the corresponding author upon reasonable request, pending ethical approvals.
 
-Contact: **Prof. Guilhem Bousquet** — guilhem.bousquet@aphp.fr  
-ORCID: [0000-0001-5594-6694](https://orcid.org/0000-0001-5594-6694)
+**Contact:** Prof. Guilhem Bousquet — [guilhem.bousquet@aphp.fr](mailto:guilhem.bousquet@aphp.fr) · ORCID: [0000-0001-5594-6694](https://orcid.org/0000-0001-5594-6694)
 
 ---
 
-## Authors & Affiliations
+## 👥 Authors & Affiliations
 
 | Author | Affiliation |
 |---|---|
-| Kelly Larissa Vomo Donfack | Université Sorbonne Paris Nord, LAGA, CNRS, UMR 7539 & IHSM UMA-CSIC, Málaga, Spain & Unité de Recherche SynKoMIC, Université Sorbonne Paris Nord, Bobigny, Fr-93017 France |
+| Kelly Larissa Vomo Donfack | Université Sorbonne Paris Nord, LAGA, CNRS UMR 7539 & IHSM UMA-CSIC, Málaga, Spain |
 | Burak Gönüllu | Faculty of Medicine, Yeditepe University, Istanbul, Turkey |
 | Frédéric Pamoukjian | Hôpital Avicenne, APHP, Service de Gériatrie |
 | Eurydice Angeli | Hôpital Avicenne, APHP, Service d'Oncologie médicale |
-| Grégory Ginot | Université Sorbonne Paris Nord, LAGA, CNRS, UMR 7539 |
-| Ian Morilla† | Université Sorbonne Paris Nord, LAGA, CNRS, UMR 7539 & IHSM UMA-CSIC |
-| Guilhem Bousquet†* | Unité SynKoMIC, Université Sorbonne Paris Nord & Hôpital Avicenne, APHP |
+| Grégory Ginot | Université Sorbonne Paris Nord, LAGA, CNRS UMR 7539 |
+| Ian Morilla† | Université Sorbonne Paris Nord, LAGA, CNRS UMR 7539 & IHSM UMA-CSIC |
+| Guilhem Bousquet†★ | Unité SynKoMIC, Université Sorbonne Paris Nord & Hôpital Avicenne, APHP |
 | Géraldine Falgarone† | Unité SynKoMIC, Université Sorbonne Paris Nord & Hôpital Avicenne, APHP |
 
-†co-senior authorship
+†co-senior authorship · ★corresponding author
 
 ---
 
-## Funding
+## 💰 Funding
 
-No external funding. Kelly Larissa Vomo Donfack received a Ph.D. Grant from Sorbonne Paris Nord University.
+No external funding. Kelly Larissa Vomo Donfack received a Ph.D. grant from Sorbonne Paris Nord University.
 
-## Conflict of Interest
+## ⚖️ Conflict of Interest
 
-The authors have declared that no conflict of interest exists.
+The authors declare no conflict of interest.
 
 ---
 
-## Citation
+## 🎈 Citation
 
 If you use this code or data in your work, please cite:
 
+```bibtex
+@article{VomoDonfack2026multimorbidity,
+  author  = {Vomo Donfack, Kelly Larissa and Gönüllu, Burak and Pamoukjian, Frédéric
+             and Angeli, Eurydice and Ginot, Grégory and Morilla, Ian
+             and Bousquet, Guilhem and Falgarone, Géraldine},
+  title   = {Decoding multimorbidity: Understanding cancers, inflammatory chronic
+             diseases contribution to death},
+  journal = {submitted},
+  year    = {2026}
+}
 ```
-Vomo Donfack KL, Gönüllu B, Pamoukjian F, Angeli E, Ginot G, Morilla I, Bousquet G, Falgarone G.
-Decoding multimorbidity: Understanding cancers, inflammatory chronic diseases contribution to death.
-submitted, 2026. DOI: [TBD]
-```
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions. Please open an issue before submitting a pull request. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for guidelines.
+
+---
+
+## 📜 License
+
+This project is licensed under the GNU General Public License v3.0 — see [`LICENSE`](LICENSE) for details.
+
+> **Note:** The license badge in the original README incorrectly stated MIT — this repo uses GPL-3.0 as declared in the `LICENSE` file.
+
+---
+
+<div align="center">
+  Made with ❤️ by <a href="https://github.com/MorillaLab">MorillaLab</a>
+</div>
+
